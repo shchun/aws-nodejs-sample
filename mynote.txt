@@ -1,0 +1,38 @@
+aws polly synthesize-speech  \
+--text-type ssml \
+--text '<speak> Mary has a <prosody rate="-10%"><amazon:effect name="whispered"> \
+little lamb.</amazon:effect></prosody></speak>' \
+--output-format mp3 \
+--voice-id Joanna \
+speech.mp3 
+
+aws polly synthesize-speech  \
+--text-type ssml \
+--text '<speak><emphasis level="strong">Hello</emphasis> world how are you?</speak>' \
+--output-format mp3 \
+--voice-id Joanna \
+speech.mp3
+
+aws polly synthesize-speech  \
+--text-type ssml \
+--text '<speak>Today is <say-as interpret-as="date" format="md" >4/6</say-as></speak>' \
+--output-format mp3 \
+--voice-id Joanna \
+speech.mp3
+
+aws polly synthesize-speech   \
+--text-type ssml \
+--text '<speak>That restaurant is terrific. <lang xml:lang="es-ES">Mucho gusto.</lang></speak>' \
+--output-format mp3 \
+--voice-id Joanna \
+speech.mp3
+
+// Korean
+
+aws polly synthesize-speech   \
+--text-type ssml \
+--text '<speak> 안녕하세요? 외국어를 구사하십니까? 이 세상에는 수많은 언어들이 있답니다。 <lang xml:lang="es-ES">Mucho gusto.</lang></speak>' \
+--output-format mp3 \
+--voice-id Seoyeon \
+speech.mp3
+
